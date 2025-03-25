@@ -1,0 +1,122 @@
+/* Base Transitions */
+.transition-base {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.transition-medium {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.transition-slow {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Button Animations */
+.btn-hover {
+  @apply transform transition-medium;
+}
+
+.btn-hover:hover {
+  @apply -translate-y-0.5 shadow-lg;
+}
+
+.btn-hover:active {
+  @apply translate-y-0 shadow-md;
+}
+
+/* Form Field Animations */
+.input-focus {
+  @apply transition-medium;
+}
+
+.input-focus:focus {
+  @apply ring-2 ring-offset-2 ring-indigo-500 border-indigo-500;
+}
+
+/* Validation Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes success-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.animate-success {
+  animation: success-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+/* Page Transitions */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* Loading Animations */
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.progress-bar {
+  @apply relative overflow-hidden rounded-full bg-gray-200;
+}
+
+.progress-bar::after {
+  content: '';
+  @apply absolute inset-0 bg-indigo-600 rounded-full;
+  animation: progress 2s ease-in-out infinite;
+}
+
+/* Hero Section Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Crop Tool Animations */
+.crop-box {
+  @apply transition-medium;
+}
+
+.crop-box:hover {
+  @apply ring-2 ring-indigo-500;
+}
+
+/* Success Checkmark Animation */
+@keyframes checkmark {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-checkmark {
+  animation: checkmark 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* Disable Animations */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,24 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# Protect sensitive routes
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /auth/
+
+# Crawl-delay for rate limiting
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://billit.pro/sitemap.xml

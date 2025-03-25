@@ -1,0 +1,44 @@
+{
+  "short_name": "billit.pro",
+  "name": "billit.pro - Professional Invoice Generator",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4F46E5",
+  "background_color": "#ffffff",
+  "description": "Professional invoice generator and bill management software",
+  "categories": ["business", "finance", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Create Invoice",
+      "short_name": "Invoice",
+      "description": "Create a new invoice",
+      "url": "/dashboard/invoices/new"
+    },
+    {
+      "name": "Process Bills",
+      "short_name": "Bills",
+      "description": "Process and manage bills",
+      "url": "/dashboard/bills"
+    }
+  ]
+}
